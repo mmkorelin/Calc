@@ -21,6 +21,9 @@ class Calculator(QMainWindow):
         self.ui.btn_8.clicked.connect(lambda: self.add_digit('8'))
         self.ui.btn_9.clicked.connect(lambda: self.add_digit('9'))
 
+        # Arithmetics signs
+        self.ui.btn_CE.clicked.connect(lambda: self.ui.lineEdit.setText(''))
+
     def add_digit(self, btn_text: str) -> None:
         if self.ui.lineEdit.text() == '0':
             self.ui.lineEdit.setText(btn_text)
